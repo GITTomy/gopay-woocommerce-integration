@@ -311,22 +311,28 @@ class Gopay_Gateway_API {
 	public static function check_enabled_on_gopay( string $currency ): array {
 		$options = get_option( 'woocommerce_' . GOPAY_GATEWAY_ID . '_settings' );
 		$gopay   = self::auth_gopay( $options );
+		$site_language = get_locale();
+		$language_code = strstr($site_language, '_', true) ?: $site_language;
 
 		$payment_methods  = array();
 		$banks            = array();
-		$enabled_payments = $gopay->getPaymentInstruments( $options['goid'], $currency );
+		$enabled_payments = $gopay->getPaymentInstruments( $options['goid'], $currency . '?lang=' . $language_code);
 
 		if ( 200 == $enabled_payments->statusCode && isset( $enabled_payments->json['enabledPaymentInstruments'] ) ) {
+			// Determine if the specified language code exists in the response
+			$paymentInstrument = reset($enabled_payments->json['enabledPaymentInstruments']);
+			$language_code = isset($paymentInstrument['label'][$language_code]) ? $language_code : 'cs';
+
 			foreach ( $enabled_payments->json['enabledPaymentInstruments'] as $key => $payment_method ) {
 				$payment_methods[ $payment_method['paymentInstrument'] ] = array(
-					'label' => $payment_method['label']['cs'],
+					'label' => $payment_method['label'][$language_code],
 					'image' => $payment_method['image']['normal'],
 				);
 
 				if ( 'BANK_ACCOUNT' === $payment_method['paymentInstrument'] ) {
 					foreach ( $payment_method['enabledSwifts'] as $bank ) {
 						$banks[ $bank['swift'] ] = array(
-							'label'   => $bank['label']['cs'],
+							'label'   => $bank['label'][$language_code],
 							'country' => 'OTHERS' !== $bank['swift'] ? substr( $bank['swift'], 4, 2 ) : '',
 							'image'   => $bank['image']['normal'],
 						);

@@ -314,6 +314,13 @@ class Gopay_Gateway_API {
 		$site_language = get_locale();
 		$language_code = strstr($site_language, '_', true) ?: $site_language;
 
+		$reflection = new ReflectionClass(GoPay\Definition\Language::class);
+		$constants = $reflection->getConstants();
+		$is_in_array = in_array(strtoupper($language_code), $constants, true);
+		if ( !$is_in_array ) {
+			$language_code = strtolower(GoPay\Definition\Language::ENGLISH);
+		}
+
 		$payment_methods  = array();
 		$banks            = array();
 		$enabled_payments = $gopay->getPaymentInstruments( $options['goid'], $currency . '?lang=' . $language_code);
@@ -321,7 +328,7 @@ class Gopay_Gateway_API {
 		if ( 200 == $enabled_payments->statusCode && isset( $enabled_payments->json['enabledPaymentInstruments'] ) ) {
 			// Determine if the specified language code exists in the response
 			$paymentInstrument = reset($enabled_payments->json['enabledPaymentInstruments']);
-			$language_code = isset($paymentInstrument['label'][$language_code]) ? $language_code : 'cs';
+			$language_code = isset($paymentInstrument['label'][$language_code]) ? $language_code : strtolower(GoPay\Definition\Language::CZECH);
 
 			foreach ( $enabled_payments->json['enabledPaymentInstruments'] as $key => $payment_method ) {
 				$payment_methods[ $payment_method['paymentInstrument'] ] = array(

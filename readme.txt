@@ -4,7 +4,7 @@ Tags: WooCommerce, GoPay
 Requires at least: 5.8
 Tested up to: 6.4
 Requires PHP: 8.1
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,3 +100,6 @@ Replace get_post_meta with get_meta to fully leverage the performance benefits o
 
 = 1.0.12 =
 Plugin compatibility with WC Block based checkout, Fix db duplicate entry error after payment status check
+
+= 1.0.13 =
+Introduced new payment methods: Twisto and Skip Pay. The checkout payment methods language now aligns with the WordPress site language.

@@ -408,14 +408,14 @@ class Gopay_Gateway_Options {
 			'GPAY'         => array( 'label' => __( 'Google Pay', 'gopay-gateway' ) ),
 			'APPLE_PAY'    => array( 'label' => __( 'Apple Pay', 'gopay-gateway' ) ),
 			'GOPAY'        => array( 'label' => __( 'GoPay wallet', 'gopay-gateway' ) ),
+			'TWISTO'       => array( 'label' => __( 'Twisto', 'gopay-gateway' ) ),
+			'SKIPPAY'      => array( 'label' => __( 'Skip Pay', 'gopay-gateway' ) ),
 			'PAYPAL'       => array( 'label' => __( 'PayPal wallet', 'gopay-gateway' ) ),
 			'MPAYMENT'     => array( 'label' => __( 'mPlatba (mobile payment)', 'gopay-gateway' ) ),
 			'PRSMS'        => array( 'label' => __( 'Premium SMS', 'gopay-gateway' ) ),
 			'PAYSAFECARD'  => array( 'label' => __( 'PaySafeCard coupon', 'gopay-gateway' ) ),
 			'BITCOIN'      => array( 'label' => __( 'Bitcoin wallet', 'gopay-gateway' ) ),
 			'CLICK_TO_PAY' => array( 'label' => __( 'Click to Pay', 'gopay-gateway' ) ),
-			'TWISTO' => array( 'label' => __( 'Twisto', 'gopay-gateway' ) ),
-			'SKIPPAY' => array( 'label' => __( 'Skip Pay', 'gopay-gateway' ) ),
 		);
 
 		$options = get_option( 'woocommerce_wc_gopay_gateway_settings', array() );

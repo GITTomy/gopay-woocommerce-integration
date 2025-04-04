@@ -712,12 +712,12 @@ function init_gopay_gateway_gateway() {
 				$selected_banks           = $this->get_option( 'enable_banks', array() );
 
 				// Intersection of all selected and the supported by the currency.
-				$payment_methods = array_intersect_key(
-					$supported_payment_methods,
-					array_flip(
-						$selected_payment_methods
-					)
-				);
+				$payment_methods = array();
+				foreach ( $selected_payment_methods as $method ) {
+					if ( isset($supported_payment_methods[$method]) ) {
+						$payment_methods[$method] = $supported_payment_methods[$method];
+					}
+				}
 				$banks           = array_intersect_key( $supported_banks, array_flip( $selected_banks ) );
 
 				// Check if subscription - only card payment is enabled.

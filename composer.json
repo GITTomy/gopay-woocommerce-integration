@@ -1,7 +1,7 @@
 {
     "require": {
         "php": ">=7.1",
-        "gopay/payments-sdk-php": "^1.4",
+        "gopay/payments-sdk-php": "^1.10.1",
         "guzzlehttp/guzzle": "^7.7.0"
     },
     "require-dev": {

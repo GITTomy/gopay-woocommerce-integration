@@ -18,7 +18,7 @@
  * License URI:          https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path:          /languages
  * WC requires at least: 7.0.0
- * WC tested up to:      9.8.5
+ * WC tested up to:      10.1.0
  */
 
 // If this file is called directly, abort.

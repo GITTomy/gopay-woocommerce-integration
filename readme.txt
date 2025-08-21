@@ -111,4 +111,4 @@ Updated supported WordPress version to v6.7.1 and WooCommerce to v9.6.1.
 Add extra API parameters and fix an issue that, in certain cases, prevents virtual products from being added to checkout.
 
 = 1.0.16 =
-Updated supported WordPress version to v6.8.1 and WooCommerce to v9.8.5.
+Updated supported WordPress version to v6.8.1 and WooCommerce to v10.1.0.

@@ -4,7 +4,7 @@ Tags: WooCommerce, GoPay
 Requires at least: 5.8
 Tested up to: 6.8.1
 Requires PHP: 8.1
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,3 +118,6 @@ Fix the error for an undefined GoPay reference that prevents the payment gateway
 
 = 1.0.18 =
 Fix script issue causing appendChild failure on gateway load in some specific WordPress themes.
+
+= 1.0.19 =
+Feature: create admin notifications for user plugin feedback

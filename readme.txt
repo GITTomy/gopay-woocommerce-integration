@@ -4,7 +4,7 @@ Tags: WooCommerce, GoPay
 Requires at least: 5.8
 Tested up to: 6.8.1
 Requires PHP: 8.1
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,3 +149,6 @@ Fix script issue causing appendChild failure on gateway load in some specific Wo
 
 = 1.0.19 =
 Feature: create admin notifications for user plugin feedback
+
+= 1.0.20 =
+Fix: Block-based checkout issue when using the Local Pickup option; updated readme description text.

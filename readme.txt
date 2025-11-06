@@ -11,11 +11,39 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 WooCommerce and GoPay payment gateway integration
 
 == Description ==
-This is the official plugin for connecting GoPay payment gateway to your e-shop. GoPay is already used by over 18,000 e-shops in the Czech Republic, Slovakia and all over the world. Start accepting payments today!
+Official plugin for integrating the GoPay payment gateway with WooCommerce. Fast, secure, and simple – no external setup needed.
+
+= Key Features =
+* Integrated support for multiple payment methods: cards, Apple Pay, Google Pay, bank transfer, QR payments, saved cards.
+* Responsive checkout – works seamlessly on both desktop and mobile.
+* Subscriptions and recurring payments (compatible with WooCommerce Subscriptions).
+* Security: PSD2, 3D Secure, and encrypted data transfer.
+* Support for multiple currencies and 19+ languages.
+* Automatic notifications (webhooks) about payment and order status.
+* Refunds, cancellations, and payment renewals directly from WooCommerce admin.
+
+= Supported Payment Methods =
+* **Credit and debit card payments** – Accept secure card payments directly on your site, with support for PSD2 and 3D Secure.
+* **Google Pay** – Fast and simple payments using saved cards through Android devices or web browsers.
+* **Apple Pay** – Seamless checkout with Apple’s secure payment platform, optimized for iPhone, iPad, and Mac.
+* **Click to Pay** – Modern payment method supported by Visa and Mastercard, enabling one-click checkout with stored cards.
+* **Bank transfer** – Standard bank transfers for customers preferring direct payments from their bank account.
+* **QR payments** – Convenient QR code payments widely used in the Czech Republic and Slovakia.
+* **Saved cards** – Customers can store their card details securely for faster one-click payments in the future.
+
+= Why Choose GoPay? =
+* Trusted by more than 19,000 merchants in the Czech Republic, Slovakia, and beyond.
+* Wide range of modern and local payment methods in one integration.
+* Fully secure and compliant with European standards (PSD2, 3D Secure).
+* Easy setup and administration inside WooCommerce.
+* Local support and documentation in English and Czech.
+
+= Need help? =
+If something doesn't work as expected, please reach out via our [support page](https://wordpress.org/support/plugin/gopay-gateway/) first. We'll do our best to resolve your issue.
 
 = Plugin functions: =
 * 56 payment methods including Google Pay, Apple Pay, Click to Pay and PSD2 bank transfers
-* 9 currencies and 13 language localizations
+* 9 currencies and 19 language localizations
 * mobile and desktop payment gateway
 * remember mode on the payment gateway - customer can remember payment card details and pay just by one click
 * payment cancellation

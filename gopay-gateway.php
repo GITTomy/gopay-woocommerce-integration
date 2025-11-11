@@ -19,6 +19,7 @@
  * Domain Path:          /languages
  * WC requires at least: 7.0.0
  * WC tested up to:      10.1.0
+ * Requires Plugins:     woocommerce
  */
 
 // If this file is called directly, abort.
@@ -74,7 +75,7 @@ register_activation_hook(__FILE__, array('Gopay_Gateway_Activator', 'activate'))
 register_deactivation_hook(__FILE__, array('Gopay_Gateway_Deactivator', 'deactivate'));
 
 // Check if Woocommerce GoPay Gateway was instantiated.
-add_action('plugins_loaded', array('Gopay_Gateway', 'get_instance'));
+add_action('init', array('Gopay_Gateway', 'get_instance'));
 // Load text domain for translations.
 add_action('init', array('Gopay_Gateway', 'load_textdomain'), 99);
 

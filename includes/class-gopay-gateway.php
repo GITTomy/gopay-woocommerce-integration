@@ -63,14 +63,8 @@ function init_gopay_gateway_gateway() {
 				GOPAY_GATEWAY_URL . 'includes/assets/images/gopay.png'
 			);
 			$this->has_fields         = false;
-			$this->method_title       = __(
-				'GoPay payment gateway',
-				'gopay-gateway'
-			);
-			$this->method_description = __(
-				'Take payments via GoPay payment gateway.',
-				'gopay-gateway'
-			);
+			$this->method_title       = 'GoPay payment gateway';
+			$this->method_description = 'Take payments via GoPay payment gateway.';
 
 			$this->enable_currencies          = Gopay_Gateway_Options::supported_currencies();
 			$this->supported_languages        = Gopay_Gateway_Options::supported_languages();
@@ -151,6 +145,14 @@ function init_gopay_gateway_gateway() {
 			if ( check_is_plugin_active( 'woocommerce-subscriptions/woocommerce-subscriptions.php' ) ) {
 				Gopay_Gateway_Subscriptions::subscriptions_actions_filters();
 			}
+		}
+		
+		public function get_method_title() {
+			return __( $this->method_title, 'gopay-gateway' ); 
+		}
+
+		public function get_method_description() {
+			return __( $this->method_description, 'gopay-gateway' );
 		}
 
 		/**

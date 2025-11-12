@@ -273,25 +273,6 @@ function init_gopay_gateway_gateway() {
 						'css'     => 'display: none;',
 						'default' => 'no',
 					),
-					'goid'          => array(
-						'title'       => __( 'GoID', 'gopay-gateway' ),
-						'type'        => 'text',
-						'description' => __(
-							sprintf(
-								__(
-									'Enter your unique GoID, which can be found in your GoPay account settings.'
-									. ' %1$sMore information%2$s.',
-									'gopay-gateway'
-								),
-								'<a href="https://help.gopay.com/en/knowledge-base/gopay-account/' .
-								'gopay-business-account/signing-in-password-reset-activating-and-deactivating' .
-								'-the-payment-gateway/how-to-activate-the-payment-gateway">',
-								'</a>'
-							)
-						),
-						'css'         => 'width: 500px;',
-						'placeholder' => __( 'Insert Your GoID...', 'gopay-gateway' ),
-					),
 					'client_id'     => array(
 						'title'       => __( 'Client ID', 'gopay-gateway' ),
 						'type'        => 'text',
@@ -329,6 +310,25 @@ function init_gopay_gateway_gateway() {
 						),
 						'css'         => 'width: 500px;',
 						'placeholder' => __( 'Insert Your GoPay Client Secret Token...', 'gopay-gateway' ),
+					),
+					'goid'          => array(
+						'title'       => __( 'GoID', 'gopay-gateway' ),
+						'type'        => 'text',
+						'description' => __(
+							sprintf(
+								__(
+									'Enter your unique GoID, which can be found in your GoPay account settings.'
+									. ' %1$sMore information%2$s.',
+									'gopay-gateway'
+								),
+								'<a href="https://help.gopay.com/en/knowledge-base/gopay-account/' .
+								'gopay-business-account/signing-in-password-reset-activating-and-deactivating' .
+								'-the-payment-gateway/how-to-activate-the-payment-gateway">',
+								'</a>'
+							)
+						),
+						'css'         => 'width: 500px;',
+						'placeholder' => __( 'Insert Your GoID...', 'gopay-gateway' ),
 					),
 					'test'                             => array(
 						'title'    => __( 'Test mode', 'gopay-gateway' ),
@@ -398,25 +398,6 @@ function init_gopay_gateway_gateway() {
 						'desc_tip'    => true,
 						'placeholder' => __( 'Insert Description...', 'gopay-gateway' ),
 					),
-					'goid'                             => array(
-						'title'       => __( 'GoID', 'gopay-gateway' ),
-						'type'        => 'text',
-						'description' => __(
-							sprintf(
-								__(
-									'Enter your unique GoID, which can be found in your GoPay account settings.'
-									. ' %1$sMore information%2$s.',
-									'gopay-gateway'
-								),
-								'<a href="https://help.gopay.com/en/knowledge-base/gopay-account/' .
-								'gopay-business-account/signing-in-password-reset-activating-and-deactivating' .
-								'-the-payment-gateway/how-to-activate-the-payment-gateway">',
-								'</a>'
-							)
-						),
-						'css'         => 'width: 500px;',
-						'placeholder' => __( 'Insert Your GoID...', 'gopay-gateway' ),
-					),
 					'client_id'                        => array(
 						'title'       => __( 'Client ID', 'gopay-gateway' ),
 						'type'        => 'text',
@@ -454,6 +435,25 @@ function init_gopay_gateway_gateway() {
 						),
 						'css'         => 'width: 500px;',
 						'placeholder' => __( 'Insert Your GoPay Client Secret Token...', 'gopay-gateway' ),
+					),
+					'goid'                             => array(
+						'title'       => __( 'GoID', 'gopay-gateway' ),
+						'type'        => 'text',
+						'description' => __(
+							sprintf(
+								__(
+									'Enter your unique GoID, which can be found in your GoPay account settings.'
+									. ' %1$sMore information%2$s.',
+									'gopay-gateway'
+								),
+								'<a href="https://help.gopay.com/en/knowledge-base/gopay-account/' .
+								'gopay-business-account/signing-in-password-reset-activating-and-deactivating' .
+								'-the-payment-gateway/how-to-activate-the-payment-gateway">',
+								'</a>'
+							)
+						),
+						'css'         => 'width: 500px;',
+						'placeholder' => __( 'Insert Your GoID...', 'gopay-gateway' ),
 					),
 					'test'                             => array(
 						'title'    => __( 'Test mode', 'gopay-gateway' ),

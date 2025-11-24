@@ -410,9 +410,9 @@ class Gopay_Gateway_API {
 				}
 
 				if ( $all_virtual_downloadable ) {
-					$order->set_status( 'completed' );
+					$order->set_status( apply_filters( 'gopay_gateway_status_paid_virual_downloadable', 'completed', $order ) );
 				} else {
-					$order->set_status( 'processing' );
+					$order->set_status( apply_filters( 'gopay_gateway_status_paid', 'processing', $order ) );
 				}
 
 				// Update retry status.
